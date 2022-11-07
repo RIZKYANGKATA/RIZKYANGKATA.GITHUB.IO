@@ -1,0 +1,127 @@
+<!--RIZKY ANGKATA-->
+<!--TUGAS UTS-->
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>HALAMAN 1</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                background: url('s2.jpg');
+            }
+            header{
+                height: 75px;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                background: black;
+                z-index: 2;
+            }
+            #logo{
+                line-height: 60px;
+                margin-left: 40px;
+                display: inline-block;
+                cursor: pointer;
+                font-size: 30px;
+                font-weight: bold;
+                color:dimgray;
+                margin-top: 7px;
+            }      
+            #logo:hover{
+                color:#ecf0f1;
+            }
+
+            #logo-s{
+                color: #ecf0f1;
+                margin-left: 5px;
+            }
+
+            #logo:hover #logo-s{
+                color:dimgrey;
+            }
+            .mtpl{
+                float: right;
+                line-height: 60px;
+                margin-right: 40px;
+                margin-top: 7px; 
+            }
+            .mtpl a{
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .mtpl a:hover{
+                color: black;
+                border-color: white;
+                background-color: #fff;
+            }
+            .edt{
+                border: 2px solid #fff;
+                border-radius: 50px;
+                padding : 6px 15px;
+            }
+            .isi{
+                position: absolute;
+                color:#fff;
+                letter-spacing: 2px;
+                line-height: 50px;
+                top: 60%;
+                left: 15%;
+                -webkit-animation-name:posi;
+                -webkit-animation-duration: 2s;
+                animation-name: posi;
+                animation-duration: 2s;
+                z-index: 1;
+            }
+           
+            .isi h1{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                font-style: italic;
+                margin-bottom: 15px;
+                color:#fff;
+            }
+           
+            .isi h1:hover{
+                color: black;
+            }
+          
+            .isi .efek{
+                font-size: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .isi .efek:hover{
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="logo">INI<a id="logo-s">RESTO</a></div>
+            <span class="mtpl"><a href="h4.html" class="edt" href="#">Pemesanan</a></span>
+            <span class="mtpl"><a href="h3.html" class="edt" href="#">Pilihan Menu</a></span>
+            <span class="mtpl"><a href="h2.html" class="edt" href="#">Profil Restaurant</a></span>
+            <span class="mtpl"><a href="h1.html" class="edt" href="#">Home</a></span>
+        </header>
+
+        <div class="f1">
+            <div class="isi">
+                <h1>WELCOME TO</h1>
+                <h1>INI RESTO</h1>
+            </div>  
+        </div>
+    </body>
+</html>

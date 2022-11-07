@@ -1,0 +1,291 @@
+<html>
+
+<head>
+    <title>HALAMAN 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 17px;
+            background-color: #fff;
+            
+        }
+
+        header {
+            height: 75px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            background: black;
+            z-index: 2;
+        }
+
+        #logo {
+            line-height: 60px;
+            margin-left: 40px;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 30px;
+            font-weight: bold;
+            color: dimgray;
+            margin-top: 7px;
+        }
+
+        #logo:hover {
+            color: #ecf0f1;
+        }
+
+        #logo-s {
+            color: #ecf0f1;
+            margin-left: 5px;
+        }
+
+        #logo:hover #logo-s {
+            color: dimgrey;
+        }
+
+        .mtpl {
+            float: right;
+            line-height: 60px;
+            margin-right: 40px;
+            margin-top: 7px;
+        }
+
+        .mtpl a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .mtpl a:hover {
+            color: black;
+            border-color: white;
+            background-color: #fff;
+        }
+
+        .edt {
+            border: 2px solid #fff;
+            border-radius: 50px;
+            padding: 6px 15px;
+        }
+
+        .isi {
+            position: absolute;
+            color: #fff;
+            letter-spacing: 2px;
+            line-height: 50px;
+            top: 60%;
+            left: 15%;
+            -webkit-animation-name: posi;
+            -webkit-animation-duration: 2s;
+            animation-name: posi;
+            animation-duration: 2s;
+            z-index: 1;
+        }
+
+        .isi h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .isi p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        h2 {
+            font-family: sans-serif;
+            font-size: 25px;
+        }
+
+        h3 {
+            font-family: Bradley Hand ITC;
+            font-size: 17px;
+        }
+
+        .center:hover {
+            color: grey;
+        }
+
+        .sm .sosmed:hover {
+            color: red;
+        }
+
+        header .tombol {
+            margin-top: 10px;
+            margin-left: 10px;
+            border-radius: 10px;
+            border-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .tombol:hover {
+            color: grey;
+        }
+
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 80px;
+        }
+
+        .makanan, .minuman {
+            width: 500px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            height: 5%;
+            border-radius: 10px;
+            border-color: black;
+        }
+
+        h1 {
+            text-align: center;
+            border: 1px solid black;
+        }
+        .minuman #btn:hover{
+            color: white;
+            background-color: black;
+        }
+        .minuman #reset:hover{
+            color: white;
+            background-color: black;
+        }
+        .makanan #btn-makanan:hover{
+            color: white;
+            background-color: black;
+        }
+        .makanan #reset-makanan:hover{
+            color: white;
+            background-color: black;
+        }
+        header{
+                position: sticky;
+        }
+        .makanan{
+            height: 650px;
+        }
+        body::-webkit-scrollbar{
+                display: none;
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">INI<a id="logo-s">RESTO</a>
+        </div>
+        <span class="mtpl"><a href="h4.html" class="edt" href="#">Pemesanan</a></span>
+        <span class="mtpl"><a href="h3.html" class="edt" href="#">Pilihan Menu</a></span>
+        <span class="mtpl"><a href="h2.html" class="edt" href="#">Profil Restaurant</a></span>
+        <span class="mtpl"><a href="h1.html" class="edt" href="#">Home</a></span>
+    </header>
+    <br><br><br><br><br><br>
+
+    
+    <div class="container">
+        <div class="minuman">
+            <h1>Menu Minuman</h1>
+            <img id="image" src="red.jpg" width="456" height="400">
+            <p class="nama">red</p>
+            <br>
+            <button id="btn">GANTI MENU</button>
+            <button id="reset">RESET</button>
+            <p id="teks"></p>
+        </div>
+
+        <div class="makanan">
+            <h1>Menu Makanan</h1>
+            <img id="image-makanan" src="mie.jpg" width="456" height="400">
+            <p class="nama">mie</p>
+            <br>
+            <button id="btn-makanan">GANTI MENU</button>
+            <button id="reset-makanan">RESET</button>
+            <p id="teks"></p>
+        </div>
+
+        <script type="text/javascript">
+            var gambarIndexm = 0;
+            var gambarm = [
+                "soto",
+                "sundukan",
+                "nasgor",
+                "mie"
+            ]
+
+            document.getElementById('btn-makanan').onclick = function change_image() {
+                if (gambarIndexm == gambarm.length - 1) {
+                    gambarIndexm = 0;
+                }
+                else {
+                    gambarIndexm++;
+                }
+                document.getElementById("image-makanan").src = `${gambarm[gambarIndexm]}.jpg`;
+                document.querySelector(".makanan .nama").textContent = gambarm[gambarIndexm];
+            }
+
+
+
+            document.getElementById('reset-makanan').onclick = function change_image() {
+                document.getElementById("image-makanan").src = "mie.jpg";
+                document.querySelector(".makanan .nama").textContent = "mie";
+                document.getElementById('teks').textContent = "";
+                gambarIndexm = 0;
+            }
+        </script>
+
+
+
+
+        <script type="text/javascript">
+            var gambarIndex = 0;
+            var gambar = [
+                "red",
+                "jeruk",
+                "kopi",
+                "teh"
+            ]
+
+            document.getElementById('btn').onclick = function change_image() {
+                if (gambarIndex == gambar.length - 1) {
+                    gambarIndex = 0;
+                }
+                else {
+                    gambarIndex++;
+                }
+                document.getElementById("image").src = `${gambar[gambarIndex]}.jpg`;
+                document.querySelector(".minuman .nama").textContent = gambar[gambarIndex];
+            }
+
+
+
+            document.getElementById('reset').onclick = function change_image() {
+                document.getElementById("image").src = "red.jpg";
+                document.querySelector(".minuman .nama").textContent = "red";
+                document.getElementById('teks').textContent = "";
+                gambarIndex = 0;
+            }
+        </script>
+    </div>
+
+
+</body>
+
+</html>

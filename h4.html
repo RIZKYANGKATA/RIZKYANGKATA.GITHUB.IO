@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>HALAMAN 4</title>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 17px;
+            background-color: #fff;
+            background: url('bg5.jpg');
+            background-size: 100%;
+        }
+
+        header {
+            height: 75px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            background: black;
+            z-index: 2;
+        }
+
+        #logo {
+            line-height: 60px;
+            margin-left: 40px;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 30px;
+            font-weight: bold;
+            color: dimgray;
+            margin-top: 7px;
+        }
+
+        #logo:hover {
+            color: #ecf0f1;
+        }
+
+        #logo-s {
+            color: #ecf0f1;
+            margin-left: 5px;
+        }
+
+        #logo:hover #logo-s {
+            color: dimgrey;
+        }
+
+        .mtpl {
+            float: right;
+            line-height: 60px;
+            margin-right: 40px;
+            margin-top: 7px;
+        }
+
+        .mtpl a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .mtpl a:hover {
+            color: black;
+            border-color: white;
+            background-color: #fff;
+        }
+
+        .edt {
+            border: 2px solid #fff;
+            border-radius: 50px;
+            padding: 6px 15px;
+        }
+        .pilihan{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pilihan b{
+            color: black;
+            font-size: 25px;
+        }
+        select{
+            width:150px;
+            height: 80px;
+            border-radius: 10px;
+        }
+        select:hover{
+            background-color: black;
+            color: #fff;
+        }
+        option, value:hover{
+            background-color: black;
+            color: #fff;
+        }
+        body::-webkit-scrollbar{
+                display: none;
+            }
+        b:hover{
+            color: #fff;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <div id="logo">INI<a id="logo-s">RESTO</a>
+            </div>
+            <span class="mtpl"><a href="h4.html" class="edt" href="#">Pemesanan</a></span>
+            <span class="mtpl"><a href="h3.html" class="edt" href="#">Pilihan Menu</a></span>
+            <span class="mtpl"><a href="h2.html" class="edt" href="#">Profil Restaurant</a></span>
+            <span class="mtpl"><a href="h1.html" class="edt" href="#">Home</a></span>
+        </header>
+        <br><br><br><br><br><br><br><br><br>
+
+            <div class="pilihan">
+            <b>PILIHAN MINUMAN</b>
+            <br>
+            <select name="var4" sive="1">
+                <option value="red">Red</option>
+                <option value="teh">Teh</option>
+                <option value="jeruk">Jeruk</option>
+                <option value="kopi">Kopi</option>
+            </select>
+            <br><br><br><br><br>
+            <b>PILIHAN MAKANAN</b>
+            <br>
+            <select name="var4" sive="1">
+                <option value="red">Soto</option>
+                <option value="teh">Nasi Goreng</option>
+                <option value="jeruk">Mie</option>
+                <option value="kopi">Sundukan</option>
+            </select>
+            <br><br>
+            </div>
+    </body>
+</html>
